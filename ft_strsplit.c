@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 16:20:36 by smarcos           #+#    #+#             */
-/*   Updated: 2019/04/26 16:21:13 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/18 20:02:17 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,33 @@
 
 char	**ft_strsplit(char const *s, char c)
 {
-    size_t  i;
-    size_t  j;
-    size_t  start;
-    char    **arr;
+	size_t	i;
+	int		count;
+	int		word;
+	char	**arr;
 
-    k = 0;
-    start = 0;
-    while (s[k] == c)
-    {
-        k++;
-        start = k;
-    }
-    j = 0;
-    while (s[k] != c && s[k] != '\0')
-    {
-        if (s[k + 1] == c || s[k + 1] == '\0')
-        {
-            arr[j] = (char *)malloc(k - start + 1);
-        }
-        k++;
-    }
-    i = 0;
-    while (s[start] != '\0')
-    {
-        if (s[start] == c)
-            ft_strsplit((s + start), c);
-        arr[j, i] = s[start];
-        i++;
-        start++;
+	i = 0;
+	count = 0;
+	word = 0;
+	while (s[i])
+	{
+		if (s[i] != c && word = 0)
+		{
+			count++;
+			word = 1;
+		}
+		else if (s[i] == c)
+			word = 0;
+		i++;
+	}
+	if (!(arr = (char **)malloc(count * sizeof(char *)));
+		return (NULL);
+	
+	j = 0;
+	while (count)
+	{
+		arr[0] = (char *)malloc(word_len *sizeof(char)));
+		arr[j] = (char *)malloc(word_len * sizeof(char));
+		j++;
+		count--;
 }
