@@ -6,45 +6,60 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 16:21:23 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/15 23:44:51 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/19 20:38:54 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int		ft_nbcount(int nb)
+{
+	int	count;
+
+	count = (nb == 0) ? 1 : 0;
+	while (nb)
+	{
+		count++;
+		nb /= 10;
+	}
+	return (count);
+}
+
+char	*ft_nbtostr(char *str, int n, int size)
+{
+	while (n)
+	{
+		str[size-- - 1] = n % 10 + '0';
+		n /= 10;
+	}
+	return (str);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*fresh;
 	int		count;
-	int		i;
 
-	i = n;
-	count = (i == 0) ? 1 : 0;
-	while (i != 0)
-	{
+	count = ft_nbcount(n);
+	if (n < 0)
 		count++;
-		i /= 10;
+	if (!(fresh = ft_strnew(count + 1)))
+		return (NULL);
+	if (n == 0)
+	{
+		fresh[0] = '0';
+		return (fresh);
 	}
-    if (n == 0)
-        return ("0");
 	else if (n < 0)
 	{
-        fresh = ft_strnew(count + 2);
 		fresh[0] = '-';
-		i++;
-        if (n < -2147483647)
-        {
-            fresh[1] = '2';
-            n = -147483648;
-        }
-        n = -n;
+		n = -n;
 	}
-    else
-	    fresh = ft_strnew(count + 1);
-	while (n)
+	if (n == MIN_INT)
 	{
-		fresh[i-- + count - 1] = n % 10 + '0';
-		n /= 10;
+		fresh[1] = '2';
+		n = 147483648;
 	}
+	fresh = ft_nbtostr(fresh, n, count);
 	return (fresh);
 }

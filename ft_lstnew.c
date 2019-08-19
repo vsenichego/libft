@@ -6,11 +6,11 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/18 20:43:18 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/18 23:10:23 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/18 23:30:47 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft"
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
