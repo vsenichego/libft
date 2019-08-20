@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_nbcount(int nb)
+static  int     ft_nbcount(int nb)
 {
 	int	count;
 
@@ -25,7 +25,7 @@ int		ft_nbcount(int nb)
 	return (count);
 }
 
-char	*ft_nbtostr(char *str, int n, int size)
+static  char    *ft_nbtostr(char *str, int n, int size)
 {
 	while (n)
 	{
@@ -35,7 +35,7 @@ char	*ft_nbtostr(char *str, int n, int size)
 	return (str);
 }
 
-char	*ft_itoa(int n)
+char            *ft_itoa(int n)
 {
 	char	*fresh;
 	int		count;
