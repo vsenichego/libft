@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 18:23:53 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/13 21:24:11 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/23 22:13:32 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	int		i;
 	size_t	nlen;
 
+	if (!(*haystack))
+		return (0);
 	if ((nlen = ft_strlen(needle)) == 0)
 		return ((char *)haystack);
 	i = 0;

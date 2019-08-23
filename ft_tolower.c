@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 18:47:41 by smarcos           #+#    #+#             */
-/*   Updated: 2019/04/26 14:11:50 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/23 22:23:50 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int	ft_tolower(int c)
 {
-	if ((unsigned char)c >= 0x41 && (unsigned char)c <= 0x5A)
-		return (c += 0x20);
+	if (c > 90)
+		return (c);
+	if ((unsigned char)c >= 65 && (unsigned char)c <= 90)
+		return (c += 32);
 	else
 		return (c);
 }

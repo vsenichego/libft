@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/18 20:43:18 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/18 23:30:47 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/20 15:47:29 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-	    if (!(node->content = malloc(sizeof(*(node->content)) * content_size)))
-		    return (NULL);
+		if (!(node->content = malloc(sizeof(*(node->content)) * content_size)))
+			return (NULL);
 		node->content = ft_memcpy(node->content, content, content_size);
 		node->content_size = content_size;
 	}

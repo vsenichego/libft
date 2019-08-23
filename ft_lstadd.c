@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/03 16:20:03 by smarcos           #+#    #+#             */
-/*   Updated: 2019/05/03 16:20:41 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/18 23:40:25 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-    if (*alst)
-    {
-        new->next = *alst;
-        *alst = new;
-    }
-    else
-        *alst = new;
+	if (*alst)
+	{
+		new->next = *alst;
+		*alst = new;
+	}
+	else
+		*alst = new;
 }

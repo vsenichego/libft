@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 18:47:04 by smarcos           #+#    #+#             */
-/*   Updated: 2019/04/26 14:05:03 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/23 22:21:41 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int	ft_toupper(int c)
 {
-	if ((unsigned char)c >= 0x61 && (unsigned char)c <= 0x7A)
-		return (c -= 0x20);
+	if (c > 122)
+		return (c);
+	if ((unsigned char)c >= 97 && (unsigned char)c <= 122)
+		return (c -= 32);
 	else
 		return (c);
 }

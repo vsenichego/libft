@@ -6,68 +6,70 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 16:20:36 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/18 20:02:17 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/20 14:52:26 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static  size_t  ft_wordcount(char const *s, char c)
+static int	ft_wordcount(char const *str, char ch)
 {
-    size_t  i;
-    size_t  count;
-    int     word;
+	size_t	i;
+	int		count;
+	int		is_word;
 
-    i = 0;
-    count = 0;
-    word = 0;
-    while (s[i])
-    {
-        if (s[i] != c && word == 0)
-        {
-            count++;
-            word = 1;
-        }
-        else if (s[i] == c)
-            word = 0;
-        i++;
-    }
-    return (count);
+	i = 0;
+	count = 0;
+	is_word = 0;
+	while (str[i])
+	{
+		if (str[i] != ch && is_word == 0)
+		{
+			count++;
+			is_word = 1;
+		}
+		else if (str[i] == ch)
+			is_word = 0;
+		i++;
+	}
+	return (count);
 }
 
-static  char    **ft_getwords(char **arr, char const *s, char c, size_t wcount)
+static char	**ft_getwords(char **arr, char const *str, char ch, int wcount)
 {
-    size_t  i;
-    size_t  j;
-    size_t  start;
+	size_t	i;
+	int		j;
+	int		start;
 
-    i = 0;
-    j = 0;
-    start = 0;
-    while (j < wcount)
-    {
-        while (s[i] == c && s[i] != '\0')
-            i++;
-        start = i;
-        while (s[i] != c && s[i] != '\0')
-            i++;
-        if (!(arr[j] = ft_strsub(s, start, i - start)))
-            return (NULL);
-        i++;
-        j++;
-    }
-    return (arr);
+	i = 0;
+	j = 0;
+	start = 0;
+	while (j < wcount)
+	{
+		while (str[i] == ch && str[i] != '\0')
+			i++;
+		start = i;
+		while (str[i] != ch && str[i] != '\0')
+			i++;
+		if (!(arr[j] = ft_strsub(str, start, i - start)))
+			return (NULL);
+		i++;
+		j++;
+	}
+	return (arr);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
-	size_t	count;
+	int		count;
 	char	**arr;
 
 	count = ft_wordcount(s, c);
 	if (!(arr = (char **)malloc(count * sizeof(char *) + 1)))
 		return (NULL);
-    arr = ft_getwords(arr, s, c, count);
-    arr[count + 1] = NULL;
-    return (arr);
+	arr = ft_getwords(arr, s, c, count);
+	if (!arr)
+		return (NULL);
+	arr[count] = NULL;
+	return (arr);
 }
