@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 17:05:09 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/20 18:47:15 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/29 19:39:30 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # define MAX_INT 2147483647
 
 # define MIN_INT -2147483648
+
+# define MAX_LONG 9223372036854775807
+
+# define MIN_LONG -9223372036854775807
 
 /*
 ** Headers
@@ -103,5 +107,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 ** Extra functions
 */
 int					ft_isspace(int c);
+size_t				ft_strnlen(const char *s, size_t maxlen);
+long				strtol(const char *str, char **endptr, int base);
 
 #endif
