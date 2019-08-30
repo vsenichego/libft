@@ -103,5 +103,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 ** Extra functions
 */
 int					ft_isspace(int c);
+char                *ft_strndup(const char *s, size_t n);
+size_t              ft_strnlen(const char *s, size_t maxlen);
 
 #endif

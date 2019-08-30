@@ -25,7 +25,7 @@ int		ft_atoi(const char *str)
 	negative = (str[i] == '-') ? -1 : 1;
 	if (str[i] == '+' || str[i] == '-')
 		i++;
-	while (ft_isdigit(str[i]) == 1)
+	while (ft_isdigit(str[i]) == 1 && str[i])
 	{
 		nbr = 10 * nbr + (str[i] - '0');
 		i++;
