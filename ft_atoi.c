@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 18:50:02 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/18 18:37:30 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/30 16:21:26 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *str)
 {
-	size_t	i;
-	size_t	nbr;
-	int		negative;
+	size_t			i;
+	long long int	nbr;
+	int				negative;
 
 	i = 0;
 	nbr = 0;
@@ -25,8 +25,15 @@ int		ft_atoi(const char *str)
 	negative = (str[i] == '-') ? -1 : 1;
 	if (str[i] == '+' || str[i] == '-')
 		i++;
-	while (ft_isdigit(str[i]) == 1)
+	while (ft_isdigit(str[i]) == 1 && str[i])
 	{
+		if ((nbr * 10 + (str[i] - '0')) < nbr)
+		{
+			if (negative == 1)
+				return (-1);
+			else
+				return (0);
+		}
 		nbr = 10 * nbr + (str[i] - '0');
 		i++;
 	}

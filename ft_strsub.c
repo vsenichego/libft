@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 16:17:46 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/15 19:42:59 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/30 18:01:30 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*subs;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	subs = ft_strnew(len);
 	if (!subs)
 		return (NULL);

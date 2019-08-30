@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 16:10:00 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/06 13:41:24 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/30 17:55:37 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_strclr(char *s)
 {
 	size_t i;
 
+	if (!s)
+		return ;
 	i = ft_strlen(s);
 	while (i)
 	{

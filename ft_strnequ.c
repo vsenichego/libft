@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 16:16:50 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/15 15:50:43 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/30 18:00:54 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	size_t i;
 
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	while (n)
 	{

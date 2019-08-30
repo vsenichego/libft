@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 16:08:18 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/23 22:36:32 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/30 17:58:13 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strnew(size_t size)
 {
 	char *s;
 
+	if (size + 1 == 0)
+		return (NULL);
 	if (!(s = (char *)malloc(size * sizeof(char) + 1)))
 		return (NULL);
 	while (size)

@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 17:05:09 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/29 19:39:30 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/30 15:52:32 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 */
 int					ft_isspace(int c);
 size_t				ft_strnlen(const char *s, size_t maxlen);
-long				strtol(const char *str, char **endptr, int base);
+char				*ft_strndup(const char *s, size_t n);
 
 #endif

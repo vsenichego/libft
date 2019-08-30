@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 16:16:00 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/15 15:49:26 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/30 18:00:23 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int		ft_strequ(char const *s1, char const *s2)
 {
 	size_t i;
 
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	while (s1[i] && s2[i])
 	{

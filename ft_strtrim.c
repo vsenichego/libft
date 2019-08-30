@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 16:19:52 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/18 17:28:31 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/30 18:05:07 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(char const *s)
 	size_t	i;
 	size_t	j;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	j = ft_strlen(s) - 1;
 	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')

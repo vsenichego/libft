@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: smarcos <smarcos@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/17 18:47:04 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/30 18:27:19 by smarcos          ###   ########.fr       */
+/*   Created: 2019/08/30 18:59:24 by smarcos           #+#    #+#             */
+/*   Updated: 2019/08/30 19:44:53 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	main(void)
 {
-	if (c >= 97 && c <= 122)
-		return (c -= 32);
-	else
-		return (c);
+	printf("%s\n", ft_memmove(NULL, NULL, 5));
+	printf("%s\n", memmove(NULL, NULL, 5));
+	return(0);
 }

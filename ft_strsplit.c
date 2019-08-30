@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/26 16:20:36 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/20 14:52:26 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/30 18:03:02 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ char		**ft_strsplit(char const *s, char c)
 	int		count;
 	char	**arr;
 
+	if (!s)
+		return (NULL);
 	count = ft_wordcount(s, c);
 	if (!(arr = (char **)malloc(count * sizeof(char *) + 1)))
 		return (NULL);
