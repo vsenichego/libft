@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/03 16:24:27 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/19 17:22:02 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/08/31 21:28:34 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,16 @@
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	while (*alst)
+	t_list	*list;
+	t_list	*tmp_next;
+
+	list = *alst;
+	while (list != NULL)
 	{
-		del((*alst)->content, (*alst)->content_size);
-		*alst = (*alst)->next;
-		free(*alst);
+		tmp_next = list->next;
+		del(list->content, list->content_size);
+		free(list);
+		list = tmp_next;
 	}
 	*alst = NULL;
 }
