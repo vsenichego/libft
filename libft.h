@@ -109,5 +109,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_isspace(int c);
 size_t				ft_strnlen(const char *s, size_t maxlen);
 char				*ft_strndup(const char *s, size_t n);
+int                 ft_isxdigit(int c);
 
 #endif
