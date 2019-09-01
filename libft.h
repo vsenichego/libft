@@ -6,7 +6,7 @@
 /*   By: smarcos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 17:05:09 by smarcos           #+#    #+#             */
-/*   Updated: 2019/08/31 20:56:40 by smarcos          ###   ########.fr       */
+/*   Updated: 2019/09/01 17:28:30 by smarcos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,8 +107,9 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 ** Extra functions
 */
 int					ft_isspace(int c);
+int					ft_isxdigit(int c);
+int					ft_ispunct(int c);
 size_t				ft_strnlen(const char *s, size_t maxlen);
 char				*ft_strndup(const char *s, size_t n);
-int                 ft_isxdigit(int c);
 
 #endif
