@@ -46,7 +46,7 @@ INCLUDE = libft.h
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) $(SRC) -I $(INCLUDE)
+	$(CC) $(CFLAGS) $(SRC) -include $(INCLUDE)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
